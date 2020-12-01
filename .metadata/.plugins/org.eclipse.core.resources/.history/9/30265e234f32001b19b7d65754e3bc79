@@ -1,0 +1,54 @@
+package com.cg.trainee.serviceImpl;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.trainee.model.Trainee;
+import com.cg.trainee.respository.TraineeJpaRepository;
+import com.cg.trainee.*;
+
+@Service
+public class TraineeServiceImpl {
+	
+	@Autowired
+	private TraineeJpaRepository repository;
+
+	public void insert(Trainee trainee) {
+	   repository.save(trainee);	
+	}
+	
+	public Object finById(int traineeId) {
+		Object trainee = repository.findById(traineeId);
+		return trainee;
+	}
+	
+	public List<Trainee> findAll() {
+		return repository.findAll();
+	}
+	
+	public List<Trainee> findByName(String traineeName) {
+		List<Trainee> traineeList = new ArrayList<>();
+		List<Trainee> list = repository.findAll();
+		for(Trainee t: list) {
+			if(t.getTraineeName().equalsIgnoreCase(traineeName)) {
+				traineeList.add(t);
+			}
+		}
+		return traineeList;
+	}
+	
+	public void deleteById(int traineeId) {
+		repository.deleteById(traineeId);
+	}
+	
+	public void updateByName(int traineeId, String traineeName) {
+	  Object trainee = repository.findById(traineeId);
+	   trainee.get().setTraineeName(traineeName);
+	   repository.saveAll(trainee);
+	}
+}

@@ -1,0 +1,22 @@
+package com.cg.employeejavaconfig.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.cg.employeejavaconfig.SpringConfig.SpringConfig;
+import com.cg.employeejavaconfig.model.Employee;
+
+public class Main {
+
+	public void startApp() {
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+		Employee employee = ctx.getBean(Employee.class);
+		employee.setEmployeeId(101);
+		employee.setEmployeeName("Harriet");
+		employee.setSalary("2000");
+		employee.setEmployeeBU("Stephen");
+		
+		
+	}
+	
+
+}

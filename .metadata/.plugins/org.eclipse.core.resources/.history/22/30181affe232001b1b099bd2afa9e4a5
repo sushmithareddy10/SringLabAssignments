@@ -1,0 +1,5 @@
+package com.cg.employeesbulistjavaannotation.config;
+
+public class SpringConfig {
+
+}

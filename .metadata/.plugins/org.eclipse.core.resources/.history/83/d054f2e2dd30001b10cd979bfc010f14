@@ -1,0 +1,14 @@
+package com.cg.employeexmlandannobased.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.cg.employeexmlandannobased.model.Employee;
+
+public class EmployeeDAO {
+	
+	public void save(Employee employee);
+	
+	
+
+}

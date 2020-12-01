@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean name="sbu" class="com.cg.employeesbubytypexmlbased.model." autowire="byType">
+           <property name="sbuCode" value="1001"></property>
+           <property name="sbuName" value="Aishu"></property>
+           <property name="sbuHead" value="Akhi"></property>
+           <property name="employee" ref="employee"></property>
+        </bean>
+        <bean name="employee" class="com.cg.sbuemployeebynametypexml.model.Employee" autowire="byType">
+           <property name="employeeId" value="100"></property>
+           <property name="employeeName" value="Sush"></property>
+           <property name="salary" value="20000"></property>
+        </bean>
+        </beans>

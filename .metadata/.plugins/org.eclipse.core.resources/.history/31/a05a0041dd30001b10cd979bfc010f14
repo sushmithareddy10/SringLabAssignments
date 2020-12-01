@@ -1,0 +1,5 @@
+package com.cg.employeexmlbased.dao;
+
+public class EmployeeDAO {
+
+}

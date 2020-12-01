@@ -1,0 +1,7 @@
+package com.cg.trainee.service;
+
+import com.cg.trainee.model.Trainee;
+
+public interface TraineeService {
+	public void insert(Trainee trainee);
+}

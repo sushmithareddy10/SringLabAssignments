@@ -1,0 +1,5 @@
+package com.cg.employeejavaconfig.model;
+
+public class Employee {
+
+}

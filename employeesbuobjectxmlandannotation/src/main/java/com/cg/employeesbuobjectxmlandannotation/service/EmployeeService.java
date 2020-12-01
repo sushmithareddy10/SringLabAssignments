@@ -1,0 +1,33 @@
+package com.cg.employeesbuobjectxmlandannotation.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.employeesbuobjectxmlandannotation.dao.EmployeeDAO;
+import com.cg.employeesbuobjectxmlandannotation.model.Employee;
+
+@Service
+public class EmployeeService {
+	@Autowired
+	private EmployeeDAO employeeDAO;
+	
+	public void add(Employee employee) {
+		employeeDAO.addEmployee(employee);
+	}
+	
+	public List<Employee> find() {
+		return employeeDAO.findAll();
+	}
+	
+	public void delete(int id) {
+		employeeDAO.deleteEmployee(id);
+	}
+	
+	public void update(int id , String name) {
+		employeeDAO.updateEmployee(id, name);
+	}
+	
+	
+}

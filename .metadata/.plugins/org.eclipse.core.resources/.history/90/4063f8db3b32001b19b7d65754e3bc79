@@ -1,0 +1,28 @@
+package com.cg.trainee;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
+
+import com.cg.trainee.model.Trainee;
+import com.cg.trainee.serviceImpl.TraineeServiceImpl;
+
+class ServiceImplTest {
+	
+	private static TraineeServiceImpl traineeService;
+	
+	@BeforeAll
+	public static void runOnce() {
+		traineeService = new TraineeServiceImpl();
+	}
+
+	@Test
+	public void test_Insert_GivenTrainee( ) {
+		Trainee trainee = new Trainee("Aishu","java","Banglore");
+		traineeService.insert(trainee);
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.cg.employeesbulistjavaannotation.main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.cg.employeesbulistjavaannotation.model.SBU;
+
+public class Main {
+
+	public void startApp() {
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+		ctx.getBean(SBU.class);
+		System.out.println(ctx);
+		
+	}
+
+}

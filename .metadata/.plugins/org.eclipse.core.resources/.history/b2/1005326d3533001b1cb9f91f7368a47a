@@ -1,0 +1,24 @@
+package com.cg.employeesbuobjectxmlandannotation.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.cg.employeesbuobjectxmlandannotation.model.Employee;
+
+public class EmployeeDAO {
+	private List<Employee> empList;
+	
+	public EmployeeDAO() {
+		empList = new ArrayList<Employee>();
+	}
+	
+	public void addEmployee(Employee employee) {
+		empList.add(employee);
+	}
+	
+	public List<Employee> findAll() {
+		return empList;
+	}
+	
+	
+}

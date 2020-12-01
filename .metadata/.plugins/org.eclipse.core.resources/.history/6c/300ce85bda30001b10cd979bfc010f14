@@ -1,0 +1,5 @@
+package com.cg.employeexmlbased.model;
+
+public class Employee {
+
+}

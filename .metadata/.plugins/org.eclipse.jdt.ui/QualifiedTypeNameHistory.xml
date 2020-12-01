@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.cg.employeexmlbased.model.Employee"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.FileSystemResource"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.BeanFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.xml.XmlBeanFactory"/>
+    <fullyQualifiedTypeName name="com.cg.employeexmlandannobased.dao.EmployeeDAO"/>
+    <fullyQualifiedTypeName name="com.cg.employeexmlandannobased.main.Main"/>
+    <fullyQualifiedTypeName name="com.cg.employeexmlandannobased.model.Employee"/>
+    <fullyQualifiedTypeName name="com.cg.employeexmlandannobased.service.EmployeeService"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.cg.employeexmlandannobased.daoimpl.EmployeeDAOImpl"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbusettertype.main.Main"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbusettertype.model.SBU"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbusettertype.model.Employee"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuconstructortype.main.Main"/>
+    <fullyQualifiedTypeName name="javax.management.InvalidApplicationException"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuconstructortype.model.SBU"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuconstructortype.model.Employee"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.cg.sbuemployeebynametypexml.main.Main"/>
+    <fullyQualifiedTypeName name="com.cg.sbuemployeebynametypexml.model.SBU"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbubytypexmlbased.main.Main"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbubytypexmlbased.model.SBU"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuobjectxmlandannotation.dao.EmployeeDAO"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuobjectxmlandannotation.model.SBU"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuobjectxmlandannotation.model.Employee"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.cg.employeesbuobjectxmlandannotation.service.EmployeeService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="com.cg.sbuemployeejavaannotationbased.model.SBU"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="com.cg.sbuemployeejavaannotationbased.main.Main"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="com.cg.sbuemployeejavaannotationbased.config.SpringConfig"/>
+    <fullyQualifiedTypeName name="com.cg.sbuemployeejavaannotationbased.model.Employee"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+</qualifiedTypeNameHistroy>

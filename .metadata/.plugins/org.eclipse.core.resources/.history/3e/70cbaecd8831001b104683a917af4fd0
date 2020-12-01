@@ -1,0 +1,5 @@
+package com.cg.sbuemployeelistxmlbased.model;
+
+public class Employee {
+
+}

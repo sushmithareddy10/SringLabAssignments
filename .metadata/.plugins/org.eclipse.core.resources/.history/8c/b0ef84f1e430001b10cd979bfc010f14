@@ -1,0 +1,5 @@
+package com.cg.employeexmlandannobased.dao;
+
+public interface EmployeeDAO {
+
+}

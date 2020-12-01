@@ -1,0 +1,15 @@
+package com.cg.employeesbuconstructortype.main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public void startApp() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,23 @@
+package com.cg.trainee.serviceImpl;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.trainee.model.Trainee;
+import com.cg.trainee.respository.TraineeJpaRepository;
+import com.cg.trainee.service.TraineeService;
+
+@Service
+public class TraineeServiceImpl  implements TraineeService{
+	
+	@Autowired
+	private TraineeJpaRepository repository;
+
+	@Override
+	public void insert(Trainee trainee) {
+		repository.save(trainee);
+		
+	}
+
+}

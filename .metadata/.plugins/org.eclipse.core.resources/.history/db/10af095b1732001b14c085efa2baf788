@@ -1,0 +1,5 @@
+package com.cg.trainee.service;
+
+public interface TraineeService {
+
+}

@@ -1,0 +1,8 @@
+package com.cg.trainee.controller;
+
+import com.cg.trainee.model.Trainee;
+
+public interface TraineeController {
+	public void insert(Trainee trainee);
+
+}

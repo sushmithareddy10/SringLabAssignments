@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id = "sbu" class = "com.cg.employeesbuconstructortype.model.SBU">
+          <constructor-arg value="1001" type="int" index="0"></constructor-arg>
+          <constructor-arg value="Sush" type="java.lang.String" index="1"></constructor-arg>
+          <constructor-arg value="Aishu" type="java.lang.String" index="2"></constructor-arg>
+          <constructor-arg type="List">
+            <list>
+              <bean id ="empList1" class="com.cg.employeesbuconstructortype.model.Employee">
+                <constructor-arg value="100" type="int" index="0"></constructor-arg>
+                <constructor-arg value="Sush" type="java.lang.String" index="1"></constructor-arg>
+                <constructor-arg value="2000" type="double" index="2"></constructor-arg>
+              </bean>
+              <bean id ="empList2" class="com.cg.employeesbuconstructortype.model.Employee">
+                <constructor-arg value="100" type="int" index="0"></constructor-arg>
+                <constructor-arg value="Sush" type="java.lang.String" index="1"></constructor-arg>
+                <constructor-arg value="2000" type="double" index="2"></constructor-arg>
+              </bean>
+            </list>
+          </constructor-arg>
+        </bean>
+        </beans>

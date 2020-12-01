@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id = "sbu" class ="com.cg.sbuemployeelistxmlbased.model.SBU">
+          <property name="sbuCode" value="101"></property>
+          <property name="sbuName" value="Sush"></property>
+          <property name="sbuHead" value="Aishu"></property>
+          <property name="employeeList">
+            <list>
+               <ref bean = "empList1"/>
+               <ref bean = "empList2"/>
+            </list>
+            
+          </property>
+        </bean>
+        
+       <bean id ="empList1" class="com.cg.sbuemployeelistxmlbased.model.Employee">
+                  <constructor-arg name="employeeId" value="101"></constructor-arg>
+                  <constructor-arg name="employeeName" value="Akhi"></constructor-arg>
+                  <constructor-arg name="salary" value="2000"></constructor-arg>
+              </bean>
+               <bean id= "empList2" class="com.cg.sbuemployeelistxmlbased.model.Employee">
+                  <constructor-arg name="employeeId" value="102"></constructor-arg>
+                  <constructor-arg name="employeeName" value="Hari"></constructor-arg>
+                  <constructor-arg name="salary" value="3000"></constructor-arg>
+              </bean>
+        </beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+ 
+     <bean id="empList" class="com.cg.springassignment1.usingxmlannotation.Employee">
+       <property name="age" value="30"/>
+       <property name="employeeId" value="12345"/>
+       <property name="employeeName" value="Harriet"/>
+       <property name="salary" value="40000.0"/>
+      </bean>
+      <bean id="empList1" class="com.cg.springassignment1.usingxmlannotation.Employee">
+       <property name="age" value="30"/>
+       <property name="employeeId" value="12346"/>
+       <property name="employeeName" value="Harry"/>
+       <property name="salary" value="45000.0"/>
+      </bean>
+      <bean id="sbu" class="com.cg.springassignment1.usingxmlannotation.SBU" autowire="byType">
+      <property name="sbuCode" value="PES-BU"/>
+      <property name="sbuName" value="Product Engineering Services"/>
+      <property name="sbuHead" value="Kiran Rao"/>
+    
+      
+      </bean>
+ </beans>        

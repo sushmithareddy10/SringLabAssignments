@@ -1,0 +1,10 @@
+package com.cg.employeesbuobjectxmlandannotation.main;
+
+public class Main {
+
+	public void startApp() {
+		
+		
+	}
+
+}

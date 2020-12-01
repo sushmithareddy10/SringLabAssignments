@@ -1,0 +1,5 @@
+package com.cg.employeesbuobjectxmlandannotation.dao;
+
+public class EmployeeDAO {
+
+}

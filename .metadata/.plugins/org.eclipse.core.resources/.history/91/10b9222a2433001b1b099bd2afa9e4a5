@@ -1,0 +1,18 @@
+package com.cg.trainee.serviceImpl;
+
+
+
+import javax.naming.Binding;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
+
+@Service
+public class MapValidationErrorService {
+	public ResponseEntity<?> MapValidationError(Binding result) {
+		return null;
+		
+	}
+
+}

@@ -1,0 +1,54 @@
+package com.cg.employeesbubytypexmlbased.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class SBU {
+     private int sbuCode;
+     private String sbuName;
+     private String sbuHead;
+     
+     @Autowired
+     private Employee employee;
+	public int getSbuCode() {
+		return sbuCode;
+	}
+	public void setSbuCode(int sbuCode) {
+		this.sbuCode = sbuCode;
+	}
+	public String getSbuName() {
+		return sbuName;
+	}
+	public void setSbuName(String sbuName) {
+		this.sbuName = sbuName;
+	}
+	public String getSbuHead() {
+		return sbuHead;
+	}
+	public void setSbuHead(String sbuHead) {
+		this.sbuHead = sbuHead;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+	public SBU(int sbuCode, String sbuName, String sbuHead, Employee employee) {
+		super();
+		this.sbuCode = sbuCode;
+		this.sbuName = sbuName;
+		this.sbuHead = sbuHead;
+		this.employee = employee;
+	}
+	@Override
+	public String toString() {
+		return "SBU [sbuCode=" + sbuCode + ", sbuName=" + sbuName + ", sbuHead=" + sbuHead + getEmployee()
+				+ "]";
+	}
+	
+	public SBU() {
+		// TODO Auto-generated constructor stub
+	}
+     
+     
+}

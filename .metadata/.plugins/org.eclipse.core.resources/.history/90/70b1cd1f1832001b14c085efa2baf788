@@ -1,0 +1,10 @@
+package com.cg.trainee.respository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import com.cg.trainee.model.Trainee;
+
+public interface TraineeJpaRepository extends JpaRepository<Trainee, Long>{
+
+}

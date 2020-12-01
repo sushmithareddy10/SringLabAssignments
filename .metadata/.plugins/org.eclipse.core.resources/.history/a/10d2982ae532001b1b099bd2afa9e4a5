@@ -1,0 +1,27 @@
+package com.cg.employeesbulistjavaannotation.config;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.cg.employeesbulistjavaannotation.model.Employee;
+
+@Configuration
+@ComponentScan("com.cg.employeesbulistjavaannotation")
+public class SpringConfig {
+	
+	@Bean("empList")
+	public ArrayList<Employee> getEmpList() {
+		Employee employee1 = new Employee(101,"Sush",3000.0);
+		Employee employee2 = new Employee(102,"Aishu",40000.0);
+		Employee[] empArray = {employee1,employee2};
+		List<Employee> empList = Arrays.asList(empArray); 
+		return (ArrayList<Employee>)empList;
+		
+	}
+
+}

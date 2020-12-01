@@ -1,0 +1,5 @@
+package com.cg.trainee.respository;
+
+public interface TraineeJpaRepository {
+
+}

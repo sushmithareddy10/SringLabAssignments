@@ -1,0 +1,40 @@
+package com.cg.employeexmlandannobased.daoimpl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.cg.employeexmlandannobased.dao.EmployeeDAO;
+import com.cg.employeexmlandannobased.model.Employee;
+
+public class EmployeeDAOImpl implements EmployeeDAO{
+	
+	private List<Employee> employeeList;
+	
+	public EmployeeDAOImpl() {
+		System.out.println("----DAO---");
+		employeeList = new ArrayList<>();
+	}
+
+	@Override
+	public void save(Employee employee) {
+		employeeList.add(employee);
+		
+	}
+
+	@Override
+	public List<Employee> getDetails() {
+		return employeeList;
+	}
+
+	@Override
+	public void delete(int id) {
+		employeeList.remove(id);
+	}
+
+	@Override
+	public void update(Employee employee) {
+		employeeList.add(employee);
+		
+	}
+
+}

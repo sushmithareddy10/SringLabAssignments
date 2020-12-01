@@ -1,0 +1,88 @@
+package com.cg.employeeannotationxmlbased.main;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.cg.employeeannotationxmlbased.model.Employee;
+import com.cg.employeeannotationxmlbased.service.EmployeeService;
+import com.cg.employeeannotationxmlbased.serviceImpl.EmployeeServivceImpl;
+
+
+
+public class Main {
+	
+	@Autowired
+	private EmployeeService employeeService;
+	
+	public void setEmployeeService(EmployeeService employeeService) {
+		this.employeeService = employeeService;
+	}
+
+	public void starApp() {
+		Scanner sc = new Scanner(System.in);
+		String mainMenu = "yes";
+		do {
+			ApplicationContext ctx=new ClassPathXmlApplicationContext("bean.xml");
+			EmployeeService employeeService = (EmployeeService) ctx.getBean("employeeService");
+			showMenu();
+			int choice  =  sc.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Enter the Employee Id: ");
+				int id = sc.nextInt() ; sc.nextLine();
+				System.out.println("Enter the Employee Name: ");
+				String name = sc.next();
+				System.out.println("Enter the Employee Salary:  ");
+				double salary = sc.nextDouble(); sc.nextLine();
+				System.out.println("Enter the Business Unit: ");
+				String businessUnit = sc.next();
+				System.out.println("Enter the Employee Age: ");
+				int age = sc.nextInt();
+				Employee employee = new Employee(id, name, salary, businessUnit,age);
+				System.out.println(employee);
+				employeeService.addEmployee(employee);
+				break;
+			case 2:
+				System.out.println(employee);
+				break;
+			case 3:
+//				System.out.println("Enter the employee Id: ");
+//				int empId = sc.nextInt();
+//				employeeService.deleteDetails(empId);
+				break;
+			case 4:
+//				Employee emp = new Employee();
+//				System.out.println("Enter the Employee Id: ");
+//				emp.setEmployeeId(sc.nextInt()); sc.nextLine();
+//				System.out.println("Enter the Employee Name: ");
+//				emp.setEmployeeName(sc.next());
+//				System.out.println("Enter the Employee Salary:  ");
+//				emp.setSalary(sc.nextDouble()); sc.nextLine();
+//				System.out.println("Enter the Business Unit: ");
+//				emp.setBusinessUnit(sc.next());
+//				System.out.println("Enter the Employee Age: ");
+//				emp.setAge(sc.nextInt());
+//				employeeService.addEmployee(emp);
+				break;
+			default: 
+				System.out.println("Enter the correct choice");
+			
+			}
+			System.out.println("Do you want to continue");
+			mainMenu = sc.next();
+		}while(mainMenu.equalsIgnoreCase("Yes"));
+		
+	}
+
+	private void showMenu() {
+		System.out.println("1. Add Employee");
+		System.out.println("2. Get Employee Details");
+		System.out.println("3. Delete Employee");
+		System.out.println("4. Update Employee");
+		
+	}
+}

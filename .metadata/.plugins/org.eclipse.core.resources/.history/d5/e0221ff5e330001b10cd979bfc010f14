@@ -1,0 +1,40 @@
+package com.cg.employeexmlandannobased.serviceimpl;
+
+import java.util.List;
+
+import com.cg.employeexmlandannobased.dao.EmployeeDAO;
+import com.cg.employeexmlandannobased.daoimpl.EmployeeDAOImpl;
+import com.cg.employeexmlandannobased.model.Employee;
+import com.cg.employeexmlandannobased.service.EmployeeService;
+
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	public EmployeeDAO employeedao;
+	
+	public EmployeeServiceImpl(Employeeemployeedao) {
+		this.employeedao = employeedao;
+	}
+	@Override
+	public void addEmployee(Employee employee) {
+		
+	}
+
+	@Override
+	public List<Employee> getEmployeeList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteDetails(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateDetails(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

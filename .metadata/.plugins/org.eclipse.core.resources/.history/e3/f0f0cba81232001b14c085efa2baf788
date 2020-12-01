@@ -1,0 +1,36 @@
+package com.cg.employeeannotationxmlbased.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.employeeannotationxmlbased.dao.EmployeeDAO;
+import com.cg.employeeannotationxmlbased.model.Employee;
+import com.cg.employeeannotationxmlbased.service.EmployeeService;
+
+@Service
+public class EmployeeServivceImpl implements EmployeeService {
+	
+
+	private EmployeeDAO employeeDAO;
+
+	
+	@Autowired
+	public void setEmployeeDAO(EmployeeDAO employeeDAO) {
+		this.employeeDAO = employeeDAO;
+	}
+
+	@Override
+	public void addEmployee(Employee employee) {
+		employeeDAO.save(employee);
+		System.out.println(employeeDAO.findAll());
+		
+	}
+
+	@Override
+	public List<Employee> getDetails() {
+		return employeeDAO.findAll();
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.cg.employeeannotationxmlbased.dao;
+
+import java.util.List;
+
+import com.cg.employeeannotationxmlbased.model.Employee;
+
+public interface EmployeeDAO {
+	
+	public void save(Employee employee);
+	
+	public  List<Employee> findAll();
+}

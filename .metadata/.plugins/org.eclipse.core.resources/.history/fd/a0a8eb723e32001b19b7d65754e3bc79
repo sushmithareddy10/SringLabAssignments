@@ -1,0 +1,36 @@
+package com.cg.trainee;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
+
+import com.cg.trainee.model.Trainee;
+import com.cg.trainee.respository.TraineeJpaRepository;
+import com.cg.trainee.serviceImpl.TraineeServiceImpl;
+
+class ServiceImplTest {
+	@Autowired
+	private static TraineeJpaRepository repository;
+
+
+
+	@Test
+	public void test_Insert_GivenTrainee() {
+		Trainee trainee = new Trainee(1,"Aishu","java","Banglore");
+		repository.save(trainee);
+		Optional<Trainee> traineeFound = repository.findById(1);
+		assertEquals(traineeFound.get().getTraineeName(), "Aishu");
+		
+	}
+	
+//	@Test
+//	public void test_FindById_ShouldReturnTraineeObject() {
+//		
+//	}
+
+}

@@ -1,0 +1,30 @@
+package com.cg.employeeannotationxmlbased.daoImpl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.cg.employeeannotationxmlbased.dao.EmployeeDAO;
+import com.cg.employeeannotationxmlbased.model.Employee;
+
+@Repository
+public class EmployeeDAOImpl implements EmployeeDAO{
+	private List<Employee> employeeList;
+	public EmployeeDAOImpl() {
+		employeeList = new ArrayList<>();
+	}
+
+	@Override
+	public void save(Employee employee) {
+		employeeList.add(employee);
+		System.out.println(employeeList);
+		
+	}
+
+	@Override
+	public List<Employee> findAll() {
+		return employeeList;
+	}
+
+}

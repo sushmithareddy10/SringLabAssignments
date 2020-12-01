@@ -1,0 +1,73 @@
+package com.cg.employeexmlandannobased.main;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.cg.employeexmlandannobased.model.Employee;
+import com.cg.employeexmlandannobased.service.EmployeeService;
+
+public class Main {
+	
+	public void starApp() {
+		Scanner sc = new Scanner(System.in);
+		String mainMenu = "yes";
+		do {
+			ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+			EmployeeService employeeService=(EmployeeService) context.getBean("employeeServiceImpl");
+			showMenu();
+			int choice  =  sc.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Enter the Employee Id: ");
+				int id = sc.nextInt(); sc.nextLine();
+				System.out.println("Enter the Employee Name: ");
+				String name = sc.next();
+				System.out.println("Enter the Employee Salary:  ");
+				Double salary = sc.nextDouble(); sc.nextLine();
+				System.out.println("Enter the Business Unit: ");
+				String businessBU = sc.next();
+				System.out.println("Enter the Employee Age: ");
+				int age = sc.nextInt();
+				Employee employee = new Employee(id,name,salary,businessBU,age);
+				employeeService.addEmployee(employee);
+				break;
+			case 2:
+				List<Employee> list = employeeService.getEmployeeList();
+				break;
+			case 3:
+				System.out.println("Enter the employee Id: ");
+				int empId = sc.nextInt();
+				employeeService.deleteDetails(empId);
+				break;
+			case 4:
+				System.out.println("Enter the Employee Id: ");
+				int employeeId = sc.nextInt(); sc.nextLine();
+				System.out.println("Enter the Employee Name: ");
+				String employeeName = sc.next();
+				System.out.println("Enter the Employee Salary:  ");
+				Double employeeSalary = sc.nextDouble(); sc.nextLine();
+				System.out.println("Enter the Business Unit: ");
+				String employeeBusinessBU = sc.next();
+				System.out.println("Enter the Employee Age: ");
+				int employeeAge = sc.nextInt();
+				Employee updateEmployee = new Employee(employeeId, employeeName, employeeSalary, employeeBusinessBU, employeeAge);
+				employeeService.addEmployee(updateEmployee);
+			}
+			System.out.println("Do you want to continue");
+			mainMenu = sc.next();
+		}while(mainMenu.equalsIgnoreCase("Yes"));
+		
+	}
+
+	private void showMenu() {
+		System.out.println("1. Add Employee");
+		System.out.println("2. Get Employee Details");
+		System.out.println("3. Delete Employee");
+		System.out.println("4. Update Employee");
+		
+	}
+
+}

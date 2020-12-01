@@ -1,0 +1,19 @@
+package com.cg.sbuemployeejavaannotationbased.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.cg.sbuemployeejavaannotationbased.model.SBU;
+
+@Configuration
+@ComponentScan("com.cg.sbuemployeejavaannotationbased")
+public class SpringConfig {
+	
+	@Bean(name = "sbu")
+	public SBU getSbu() {
+		SBU sbu = new SBU(1001,"Aishu","Akhi");
+		return sbu;
+	}
+
+}
